@@ -10,11 +10,11 @@
 	<script>
 		function secondHighest(arr) {
 			if (arr.length < 2) {
-                throw new Error("Array must have at least two elements.");
-            }
+        throw new Error("Array must have at least two elements.");
+    }
 
-            let max = arr[0];
-            let secondMax = -Infinity;
+    let max = arr[0];
+    let secondMax = -Infinity;
 
             for (let i = 1; i < arr.length; i++) {
                 if (arr[i] > max) {
@@ -26,10 +26,10 @@
             }
 
             if (secondMax === -Infinity) {
-                throw new Error("There is no second-highest element in the array.");
-            }
+        throw new Error("There is no second-highest element in the array.");
+    }
 
-            return secondMax;
+    return secondMax;
 		}
 
 		function Main() {
