@@ -8,29 +8,32 @@
 
 <body>	
 	<script>
-		function secondHighest(arr) {
-			if (arr.length < 2) {
-        throw new Error("Array must have at least two elements.");
-    }
+		function secondHighest(arr)
+		{
+			 let max = arr[0];
+              let secondMax = -Infinity;
+			 if (arr.length < 2)
+		     	{
+                   return  secondMax;
+                }
 
-    let max = arr[0];
-    let secondMax = -Infinity;
-
-            for (let i = 1; i < arr.length; i++) {
-                if (arr[i] > max) {
+              for (let i = 1; i < arr.length; i++) 
+			  {
+                if (arr[i] > max)
+				{
                     secondMax = max;
                     max = arr[i];
-                } else if (arr[i] > secondMax && arr[i] < max) {
+                }
+				else if (arr[i] > secondMax && arr[i] < max)
+				{
                     secondMax = arr[i];
                 }
-            }
+              }
+		        return secondMax;
+      }
 
-            if (secondMax === -Infinity) {
-        throw new Error("There is no second-highest element in the array.");
-    }
-
-    return secondMax;
-		}
+    
+	
 
 		function Main() {
 			var n = prompt("Enter the number of elements");
